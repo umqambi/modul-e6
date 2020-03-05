@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
+from flask import render_template
 from app import app
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return "Hello, World!!!"
+    return render_template('index.html')
 
-@app.route('/ru/')
-@app.route('/ru/index')
-def ruindex():
-    return "Привет, Мир!"
+@app.route('/fibo/')
+def fibo():
+    return render_template('fibo.html')
