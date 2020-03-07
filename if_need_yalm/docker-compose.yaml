@@ -1,0 +1,11 @@
+services:
+    flask:
+      build: .
+      volumes:
+        - ./yet_another_directory:/usr/src/yet_another_directory/
+      ports:
+        - 5000:8000
+      depends_on:
+        - memcached
+    memcached:
+      image: memcached:1.5-alpine
