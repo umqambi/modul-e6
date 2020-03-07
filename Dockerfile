@@ -10,7 +10,6 @@ RUN venv/bin/pip install -r requirements.txt
 RUN venv/bin/pip install gunicorn
 
 COPY app app
-COPY migrations migrations
 COPY e6fibo.py config.py boot.sh ./
 RUN chmod +x boot.sh
 
