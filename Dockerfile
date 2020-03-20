@@ -14,7 +14,7 @@ COPY e6fibo.py config.py boot.sh ./
 RUN chmod +x boot.sh
 
 ENV FLASK_APP e6fibo.py
-ENV MEMCACHED_SERVERS memcached:11211
+ENV MEMCACHED_SERVERS cache:11211
 
 RUN chown -R e6fibo:e6fibo ./
 USER e6fibo
