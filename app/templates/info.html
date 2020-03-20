@@ -1,0 +1,12 @@
+{% extends "base_tpl.html" %}
+
+{% block content %}
+
+<h1>Переменные:</h1>
+<p>1. {{ ms }}</p>
+<h1>Конфиг:</h1>
+<p>1. {{ config_app.SECRET_KEY }}</p>
+<p>1. {{ config_app.CACHE_TYPE }}</p>
+<p>1. {{ config_app.CACHE_DEFAULT_TIMEOUT }}</p>
+<p>1. {{ config_app.CACHE_MEMCACHED_SERVERS }}</p>
+{% endblock %}

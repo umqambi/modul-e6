@@ -35,7 +35,11 @@
     {% else %}
     
         <p class="text-sm-center"><strong>{{ number }}-ное</strong> число Фибоначчи равно = <strong style="word-wrap: break-word;">{{ fibo_for_number }}</strong></p>
-    
+        {% if from_cache %}
+            <h4>Значение полученно из кэша</h4>
+        {% else %}
+            <h4>Значение рассчитано.</h4>
+        {% endif %}
     {% endif %}
 
 {% endblock %}
