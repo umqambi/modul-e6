@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  cache:
+    image: memcached:latest
+  flask:
+    build: .
+    ports:
+      - "5200:5200"
+    depends_on:
+      - cache

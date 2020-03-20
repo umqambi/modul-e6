@@ -1,0 +1,13 @@
+
+
+services:
+  flask:
+    build: .
+    environment:
+      - MEMCACHED_SERVERS: "['memcached:12512']"
+    ports:
+      - 5000:8000
+    depends_on:
+      - memcached
+  memcached:
+    image: memcached:latest
